@@ -4,9 +4,9 @@ namespace FizzBuzz
 {
     public class FizzBuzz
     {
-        public bool Fizz(int v)
+        public string Fizz(int v)
         {
-            throw new NotImplementedException();
+            return v == 3 ? "Fizz" : "";
         }
     }
 }
