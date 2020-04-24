@@ -1,3 +1,4 @@
+using System;
 using FizzBuzz;
 using NUnit.Framework;
 
@@ -39,6 +40,12 @@ namespace FizzBuzz.Tests
         public void GivenMultipleOf3And5_ThenShouldOutputFIzz(int number)
         {
             Assert.That(_sut.Fizz(number), Is.EqualTo("FizzBuzz"));
+        }
+
+        [Test]
+        public void GivenNumberOutsideRange_ThenShouldThrowException()
+        {
+            Assert.That(_sut.Fizz(101), Is.EqualTo(new ArgumentException()));
         }
     }
 }
