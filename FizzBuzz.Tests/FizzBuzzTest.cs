@@ -27,5 +27,14 @@ namespace FizzBuzz.Tests
         {
             Assert.That(_sut.Fizz(5), Is.EqualTo("Buzz"));
         }
+
+        [TestCase(10)]
+        [TestCase(25)]
+        [TestCase(35)]
+        [TestCase(75)]
+        public void GivenMultipleOf5_ThenShouldOutputFIzz(int number)
+        {
+            Assert.That(_sut.Fizz(number), Is.EqualTo("Buzz"));
+        }
     }
 }
