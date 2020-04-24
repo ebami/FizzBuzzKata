@@ -19,5 +19,11 @@ namespace FizzBuzz.Tests
             Assert.That(_sut.Fizz(3), Is.EqualTo("Fizz"));
         }
 
+        [Test]
+        public void GivenMultipleOf3_ThenShouldOutputFIzz()
+        {
+            Assert.That(_sut.Fizz(6), Is.EqualTo("Fizz"));
+        }
+
     }
 }
