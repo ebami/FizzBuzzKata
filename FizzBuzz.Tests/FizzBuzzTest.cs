@@ -16,7 +16,7 @@ namespace FizzBuzz.Tests
         [TestCase(3)]
         [TestCase(21)]
         [TestCase(63)]
-        [TestCase(90)]
+        [TestCase(87)]
         public void GivenMultipleOf3_ThenShouldOutputFIzz(int number)
         {
             Assert.That(_sut.Fizz(number), Is.EqualTo("Fizz"));
@@ -32,10 +32,13 @@ namespace FizzBuzz.Tests
             Assert.That(_sut.Fizz(number), Is.EqualTo("Buzz"));
         }
 
-        [Test]
-        public void GivenMultipleOf3And5_ThenShouldOutputFIzz()
+        [TestCase(15)]
+        [TestCase(30)]
+        [TestCase(90)]
+        [TestCase(75)]
+        public void GivenMultipleOf3And5_ThenShouldOutputFIzz(int number)
         {
-            Assert.That(_sut.Fizz(15), Is.EqualTo("FizzBuzz"));
+            Assert.That(_sut.Fizz(number), Is.EqualTo("FizzBuzz"));
         }
     }
 }
