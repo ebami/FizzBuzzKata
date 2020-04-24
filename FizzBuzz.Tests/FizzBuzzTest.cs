@@ -64,7 +64,7 @@ namespace FizzBuzz.Tests
         [Test]
         public void GivenNumberWith5_ThenShouldOutputBuzz()
         {
-            Assert.That(_sut.Fizz(51), Is.EqualTo("Buzz"));
+            Assert.That(_sut.Fizz(52), Is.EqualTo("Buzz"));
         }
     }
 }

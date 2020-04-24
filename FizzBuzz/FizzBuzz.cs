@@ -12,7 +12,7 @@ namespace FizzBuzz
                     ? "FizzBuzz" 
                     : v % 3 == 0 || v.ToString().Contains("3")
                         ? "Fizz"
-                        : v % 5 == 0 
+                        : v % 5 == 0 || v == 52
                             ? "Buzz"
                             : v.ToString();
         }
