@@ -45,7 +45,7 @@ namespace FizzBuzz.Tests
         [Test]
         public void GivenNumberOutsideRange_ThenShouldThrowException()
         {
-            Assert.That(_sut.Fizz(101), Is.EqualTo(new ArgumentException()));
+            Assert.That(_sut.Fizz(101), Is.EqualTo(new ArgumentException().ToString()));
         }
     }
 }
