@@ -10,8 +10,8 @@ namespace FizzBuzz
                 ? new ArgumentException().ToString()
                 : (v % 3 == 0) && (v % 5 == 0 ) 
                     ? "FizzBuzz" 
-                    : v % 3 == 0 || v == 13 ? 
-                        "Fizz"
+                    : v % 3 == 0 || v.ToString().Contains("3")
+                        ? "Fizz"
                         : v % 5 == 0 
                             ? "Buzz"
                             : v.ToString();
