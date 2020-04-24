@@ -42,10 +42,13 @@ namespace FizzBuzz.Tests
             Assert.That(_sut.Fizz(number), Is.EqualTo("FizzBuzz"));
         }
 
-        [Test]
-        public void GivenNumberOutsideRange_ThenShouldThrowException()
+        [TestCase(-29)]
+        [TestCase(101)]
+        [TestCase(550)]
+        [TestCase(-200)]
+        public void GivenNumberOutsideRange_ThenShouldThrowException(int number)
         {
-            Assert.That(_sut.Fizz(101), Is.EqualTo(new ArgumentException().ToString()));
+            Assert.That(_sut.Fizz(number), Is.EqualTo(new ArgumentException().ToString()));
         }
     }
 }
