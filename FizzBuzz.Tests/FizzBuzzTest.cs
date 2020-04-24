@@ -20,7 +20,7 @@ namespace FizzBuzz.Tests
         [TestCase(87)]
         public void GivenMultipleOf3_ThenShouldOutputFIzz(int number)
         {
-            Assert.That(_sut.Fizz(number), Is.EqualTo("Fizz"));
+            Assert.That(_sut.Output(number), Is.EqualTo("Fizz"));
         }
 
         [TestCase(5)]
@@ -30,7 +30,7 @@ namespace FizzBuzz.Tests
         [TestCase(70)]
         public void GivenMultipleOf5_ThenShouldOutputFIzz(int number)
         {
-            Assert.That(_sut.Fizz(number), Is.EqualTo("Buzz"));
+            Assert.That(_sut.Output(number), Is.EqualTo("Buzz"));
         }
 
         [TestCase(15)]
@@ -39,7 +39,7 @@ namespace FizzBuzz.Tests
         [TestCase(75)]
         public void GivenMultipleOf3And5_ThenShouldOutputFIzz(int number)
         {
-            Assert.That(_sut.Fizz(number), Is.EqualTo("FizzBuzz"));
+            Assert.That(_sut.Output(number), Is.EqualTo("FizzBuzz"));
         }
 
         [TestCase(-29)]
@@ -48,7 +48,7 @@ namespace FizzBuzz.Tests
         [TestCase(-200)]
         public void GivenNumberOutsideRange_ThenShouldThrowException(int number)
         {
-            Assert.That(_sut.Fizz(number), Is.EqualTo(new ArgumentException().ToString()));
+            Assert.That(_sut.Output(number), Is.EqualTo(new ArgumentException().ToString()));
         }
 
         [TestCase(13)]
@@ -58,13 +58,13 @@ namespace FizzBuzz.Tests
         [TestCase(73)]
         public void GivenRangeofNumbersWith3_ThenShouldOutputFizz(int number)
         {
-            Assert.That(_sut.Fizz(number), Is.EqualTo("Fizz"));
+            Assert.That(_sut.Output(number), Is.EqualTo("Fizz"));
         }
 
         [Test]
         public void GivenNumberWith5_ThenShouldOutputBuzz()
         {
-            Assert.That(_sut.Fizz(52), Is.EqualTo("Buzz"));
+            Assert.That(_sut.Output(52), Is.EqualTo("Buzz"));
         }
     }
 }

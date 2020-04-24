@@ -4,17 +4,29 @@ namespace FizzBuzz
 {
     public class FizzBuzz
     {
-        public string Fizz(int v)
+        public string Output(int v)
         {
-            return v < 1 || v > 100 
-                ? new ArgumentException().ToString()
-                : (v % 3 == 0) && (v % 5 == 0 ) 
-                    ? "FizzBuzz" 
-                    : v % 3 == 0 || v.ToString().Contains("3")
-                        ? "Fizz"
-                        : v % 5 == 0 || v == 52
-                            ? "Buzz"
-                            : v.ToString();
+            if (v < 1 || v > 100)
+            {
+                return new ArgumentException().ToString();
+            }
+
+            if ((v % 3 == 0) && (v % 5 == 0))
+            {
+                return "FizzBuzz";
+            }
+
+            if (v % 3 == 0 || v.ToString().Contains("3"))
+            {
+                return "Fizz";
+            }
+
+            if (v % 5 == 0 || v == 52)
+            {
+                return "Buzz";
+            }
+
+            return v.ToString();
         }
     }
 }
