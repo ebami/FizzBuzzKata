@@ -51,12 +51,7 @@ namespace FizzBuzz.Tests
             Assert.That(_sut.Fizz(number), Is.EqualTo(new ArgumentException().ToString()));
         }
 
-        [Test]
-        public void GivenNumberWith3_ThenShouldOutputFizz()
-        {
-            Assert.That(_sut.Fizz(13), Is.EqualTo("Fizz"));
-        }
-
+        [TestCase(13)]
         [TestCase(23)]
         [TestCase(33)]
         [TestCase(53)]
