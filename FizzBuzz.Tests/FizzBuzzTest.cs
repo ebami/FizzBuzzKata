@@ -22,5 +22,10 @@ namespace FizzBuzz.Tests
             Assert.That(_sut.Fizz(number), Is.EqualTo("Fizz"));
         }
 
+        [Test]
+        public void GivenNumber5_ThenShouldOutputBuzz()
+        {
+            Assert.That(_sut.Fizz(5), Is.EqualTo("Buzz"));
+        }
     }
 }
